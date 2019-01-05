@@ -1,10 +1,11 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import { Alert } from 'react-bootstrap'
 
 class Notification extends React.Component {
   render() {
     const getNotificationDiv = () => this.props.notification === null ?
-      null : ( <div className="notification">{this.props.notification}</div> )
+      null : ( <Alert color="success">{this.props.notification}</Alert> )
 
     return getNotificationDiv()
   }

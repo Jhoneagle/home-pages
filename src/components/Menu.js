@@ -1,14 +1,33 @@
 ﻿import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { Navbar, Nav, NavItem } from 'react-bootstrap'
+import { LinkContainer } from "react-router-bootstrap"
 
 const Menu = () => {
   return (
-    <div>
-      <NavLink to="/">Main page</NavLink>&emsp;
-      <NavLink to="/aboutme">About me</NavLink>&emsp;
-      <NavLink to="/tipandtrick">Usefull things</NavLink>&emsp;
-      <NavLink to="/calculator">Calculator</NavLink>&emsp;
-    </div>
+    <Navbar inverse collapseOnSelect>
+      <Navbar.Header>
+        <Navbar.Brand>
+          Anecdote app
+        </Navbar.Brand>
+        <Navbar.Toggle />
+      </Navbar.Header>
+      <Navbar.Collapse>
+        <Nav>
+          <LinkContainer to="/">
+	    <NavItem>Home</NavItem>
+	  </LinkContainer>
+	  <LinkContainer to="/aboutme">
+	    <NavItem>About me</NavItem>
+	  </LinkContainer>
+	  <LinkContainer to="/tipandtrick">
+	    <NavItem>Usefull things</NavItem>
+	  </LinkContainer>
+	  <LinkContainer to="/calculator">
+	    <NavItem>Calculator</NavItem>
+	  </LinkContainer>
+        </Nav>
+      </Navbar.Collapse>
+    </Navbar>
   )
 }
 

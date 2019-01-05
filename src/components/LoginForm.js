@@ -2,6 +2,7 @@
 import { notify } from '../reducers/notificationReducer'
 import { login } from '../reducers/loginReducer'
 import { connect } from 'react-redux'
+import { FormGroup, FormControl, ControlLabel, Button } from 'react-bootstrap'
 
 class LoginForm extends React.Component {
   constructor(props) {
@@ -29,38 +30,36 @@ class LoginForm extends React.Component {
           <h2>Log in to application</h2>
 	  
           <form onSubmit={this.login}>
-            <div>
-              username:
-              <input
+            <FormGroup>
+              <ControlLabel>Username:</ControlLabel>
+              <FormControl
                 type="text"
                 name="username"
                 value={this.state.username}
                 onChange={this.handleFieldChange}
               />
-            </div>
-            <div>
-              password:
-              <input
+              <ControlLabel>Password:</ControlLabel>
+              <FormControl
                 type="password"
                 name="password"
                 value={this.state.password}
                 onChange={this.handleFieldChange}
               />
-            </div>
-            <button type="submit">login</button>
+              <Button bsStyle="success" type="submit">login</Button>
+            </FormGroup>
           </form>
-          <button onClick={e => this.setState({ loginFormVisible: false })}>
+          <Button bsStyle="danger" onClick={e => this.setState({ loginFormVisible: false })}>
             cancel
-          </button>
+          </Button>
         </div>
       )
     }
     
     return (
       <div className='loginForm'>
-        <button onClick={e => this.setState({ loginFormVisible: true })}>
+        <Button bsStyle="info" onClick={e => this.setState({ loginFormVisible: true })}>
           login
-        </button>
+        </Button>
       </div>
     )
   }

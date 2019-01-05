@@ -12,7 +12,15 @@ import MainView from './components/MainView'
 import CalculatorView from './components/CalculatorView'
 import TipandtrickView from './components/TipandtrickView'
 import AboutmeView from './components/AboutmeView'
+import { Container } from 'semantic-ui-react'
+import { Well } from 'react-bootstrap'
 import './index.css'
+
+const Footer = () => (
+  <Well>
+    
+  </Well>
+)
 
 class App extends React.Component {
   componentDidMount() {
@@ -23,40 +31,44 @@ class App extends React.Component {
 
   render() {
     return (
-      <Router>
-        <div>
-          <Menu />
-          
-          <Notification />
+      <Container>
+        <Router>
+          <div>
+            <Menu />
+            
+            <Notification />
+	    
+	    {this.props.user === null
+              ? <Switch>
+                  <Route path='/login' render={() =>
+                    <LoginForm />
+                  } />
+                </Switch>
+              : <Switch>
+                  <Redirect from='/login' to='/' />
+                </Switch>
+            }
 	  
-	  {this.props.user === null
-            ? <Switch>
-                <Route path='/login' render={() =>
-                  <LoginForm />
-                } />
-              </Switch>
-            : <Switch>
-                <Redirect from='/login' to='/' />
-              </Switch>
-          }
-	  
-	  <Route exact path='/' render={() =>
-            <MainView />
-          } />
-	  
-	  <Route path='/aboutme' render={() =>
-            <AboutmeView />
-          } />
-	  
-	  <Route path='/tipandtrick' render={() =>
-            <TipandtrickView />
-          } />
-	  
-	  <Route path='/calculator' render={() =>
-            <CalculatorView />
-          } />
-        </div>
-      </Router>
+	    <Route exact path='/' render={() =>
+              <MainView />
+            } />
+	    
+	    <Route path='/aboutme' render={() =>
+              <AboutmeView />
+            } />
+	    
+	    <Route path='/tipandtrick' render={() =>
+              <TipandtrickView />
+            } />
+	    
+	    <Route path='/calculator' render={() =>
+              <CalculatorView />
+            } />
+          </div>
+        </Router>
+	
+	<Footer />
+      </Container>
     )
   }
 }

@@ -4,8 +4,6 @@ import { connect } from 'react-redux'
 class AboutmeView extends React.Component {
   render() {
     const text = this.props.texts
-    console.log(text)
-    console.log(text.intro)
     
     return (
       <div>

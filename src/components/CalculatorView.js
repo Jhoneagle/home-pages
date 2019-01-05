@@ -2,6 +2,7 @@
 import { connect } from 'react-redux'
 import Calculator  from '../utils/calculator'
 import { createOutput } from '../reducers/calculatorReducer'
+import { Table, Grid, Col, Row } from 'react-bootstrap'
 
 class CalculatorView extends React.Component {
   handleChange = (event) => {
@@ -91,65 +92,129 @@ class CalculatorView extends React.Component {
   
   render() {
     return (
-      <div>
-        <table width="55" heigth="65" className="laskin">
-	  <tbody>
-	    <tr>
-	      <td>
-	        <input type="text" value={this.props.calculator} onChange={this.handleChange} name="input" size="50" maxLength="100" className="disp" />
-	      </td>
-	    </tr>
-	    <tr>
-	      <td>
-	        <input type="button" value="1" className="btsblue" onClick={this.klick("1")} />  
-		<input type="button" value="2" className="btsblue" onClick={this.klick("2")} />  
-		<input type="button" value="3" className="btsblue" onClick={this.klick("3")} />  
-		<input type="button" value="(" className="btswhite" onClick={this.klick("(")} />
-		<input type="button" value="/" onClick={this.klick("/")} className="btswhite" />
-		<input type="button" value="C" onClick={this.klick("")} className="btswhite" />	
-	        <input type="button" value="Cos" className="btsred" onClick={this.select("cos")} />
-		<input type="button" value="x^" className="btswhite" onClick={this.select("power")} />
-	      </td>
-	    </tr>
-	    <tr>
-	      <td>
-		<input type="button" value="4" className="btsblue" onClick={this.klick("4")} />  
-		<input type="button" value="5" className="btsblue" onClick={this.klick("5")} />  
-		<input type="button" value="6" className="btsblue" onClick={this.klick("6")} />  
-		<input type="button" value=")" className="btswhite" onClick={this.klick(")")} />
-		<input type="button" value="+" onClick={this.klick("+")} className="btswhite" />
-	        <input type="button" value="&#8730;" className="btsred" onClick={this.select("sqrt")} />
-	        <input type="button" value="Sin" className="btsred" onClick={this.select("sin")} />
-	        <input type="button" value="x&#178;" className="btswhite" onClick={this.select("square")} />
-	      </td>
-	    </tr>
-	    <tr>
-	      <td>
-	        <input type="button" value="7" className="btsblue" onClick={this.klick("7")} />  
-		<input type="button" value="8" className="btsblue" onClick={this.klick("8")} />  
-		<input type="button" value="9" className="btsblue" onClick={this.klick("9")} />  
-		<input type="button" value="%" className="btswhite" onClick={this.select("percent")} />
-		<input type="button" value="-" onClick={this.klick("-")} className="btswhite" />
-	        <input type="button" value="1/x" className="btsred" onClick={this.select("recip")} />
-	        <input type="button" value="Tan" className="btsred" onClick={this.select("tan")} />
-	        <input type="button" value="x&#179;" className="btswhite" onClick={this.select("cube")} />
-	      </td>
-	    </tr>
-	    <tr>
-	      <td>
-	        <input type="button" value="0" className="btsblue" onClick={this.klick("0")} />  
-	        <input type="button" value="." className="btsblue" onClick={this.klick(".")} />	
-	        <input type="button" value=" +/- " className="btsblue" onClick={this.select("plus_or_minus")} />	
-	        <input type="button" value="Pi" className="btsblue" onClick={this.select("pi")} />
-		<input type="button" value="*" onClick={this.klick("*")} className="btswhite" />
-	        <input type="button" value="=" onClick={this.doit()} className="btsred" />
-	        <input type="button" value="&#8776;" className="btsred" onClick={this.select("round")} />
-	        <input type="button" value="!" onClick={this.select("factorial")} className="btsred" />
-	      </td>
-	    </tr>
-	  </tbody>
-	</table>
-      </div>
+      <Grid>
+        <Row>
+	  <Col xs={6} md={3} />
+	  <Col xs={6} md={3}>
+	    <input type="text" value={this.props.calculator} onChange={this.handleChange} name="input" size="50" maxLength="100" />
+	  </Col>
+	  <Col xs={6} md={3} />
+	</Row>
+	<Row>
+	  <Col xs={6} md={3} />
+	  <Col xs={6} md={3}>
+	    <Table striped>
+	      <tbody>
+	        <tr>
+	          <td>
+	            <input type="button" value="1" onClick={this.klick("1")} />
+		  </td>
+		  <td>
+	  	    <input type="button" value="2" onClick={this.klick("2")} />
+		  </td>
+		  <td>
+	  	    <input type="button" value="3" onClick={this.klick("3")} />
+		  </td>
+		  <td>
+		    <input type="button" value="(" onClick={this.klick("(")} />
+	  	  </td>
+		  <td>
+		    <input type="button" value="/" onClick={this.klick("/")} />
+		  </td>
+		  <td>
+		    <input type="button" value="C" onClick={this.klick("")} />
+		  </td>
+		  <td>
+	            <input type="button" value="Cos" onClick={this.select("cos")} />
+		  </td>
+		  <td>
+		    <input type="button" value="x^" onClick={this.select("power")} />
+	          </td>
+	        </tr>
+	        <tr>
+	          <td>
+		    <input type="button" value="4" onClick={this.klick("4")} />
+		  </td>
+		  <td>
+		    <input type="button" value="5" onClick={this.klick("5")} />
+		  </td>
+		  <td>
+		    <input type="button" value="6" onClick={this.klick("6")} />
+		  </td>
+		  <td>
+		    <input type="button" value=")" onClick={this.klick(")")} />
+		  </td>
+		  <td>
+		    <input type="button" value="+" onClick={this.klick("+")} />
+		  </td>
+		  <td>
+	            <input type="button" value="&#8730;" onClick={this.select("sqrt")} />
+		  </td>
+		  <td>
+	            <input type="button" value="Sin" onClick={this.select("sin")} />
+		  </td>
+		  <td>
+	            <input type="button" value="x&#178;" onClick={this.select("square")} />
+	          </td>
+	        </tr>
+	        <tr>
+	          <td>
+	            <input type="button" value="7" onClick={this.klick("7")} />
+		  </td>
+		  <td>
+		    <input type="button" value="8" onClick={this.klick("8")} />
+		  </td>
+		  <td>
+		    <input type="button" value="9" onClick={this.klick("9")} />
+		  </td>
+		  <td>
+		    <input type="button" value="%" onClick={this.select("percent")} />
+		  </td>
+		  <td>
+		    <input type="button" value="-" onClick={this.klick("-")} />
+		  </td>
+		  <td>
+	            <input type="button" value="1/x" onClick={this.select("recip")} />
+		  </td>
+		  <td>
+	            <input type="button" value="Tan" onClick={this.select("tan")} />
+		  </td>
+		  <td>
+	            <input type="button" value="x&#179;" onClick={this.select("cube")} />
+	          </td>
+	        </tr>
+	        <tr>
+	          <td>
+	            <input type="button" value="0" onClick={this.klick("0")} />
+		  </td>
+		  <td>
+	            <input type="button" value="." onClick={this.klick(".")} />
+		  </td>
+		  <td>
+	            <input type="button" value=" +/- " onClick={this.select("plus_or_minus")} />
+		  </td>
+		  <td>
+	            <input type="button" value="Pi" onClick={this.select("pi")} />
+		  </td>
+		  <td>
+		    <input type="button" value="*" onClick={this.klick("*")} />
+		  </td>
+		  <td>
+	            <input type="button" value="=" onClick={this.doit()} />
+		  </td>
+		  <td>
+	            <input type="button" value="&#8776;" onClick={this.select("round")} />
+		  </td>
+		  <td>
+	            <input type="button" value="!" onClick={this.select("factorial")} />
+	          </td>
+	        </tr>
+	      </tbody>
+	    </Table>
+	  </Col>
+	  <Col xs={6} md={3} />
+	</Row>
+      </Grid>
     )
   }
 }
