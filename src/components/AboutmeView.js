@@ -9,39 +9,39 @@ class AboutmeView extends React.Component {
       <div>
         <h1> About me </h1>
 	
-	<div>
+	<p>
 	  { text.intro }
-	</div>
+	</p>
 	
 	<h2> Hwo am I? </h2>
 	
-	<div>
+	<p>
 	  { text.whoami1 }
-	</div>
+	</p>
 	
-	<div>
+	<p>
 	  { text.whoami2 }
-	</div>
+	</p>
 	
 	<h2> About my history </h2>
 	
-	<div>
+	<p>
 	  { text.myhistory1 }
-	</div>
+	</p>
 	
-	<div>
+	<p>
 	  { text.myhistory2 }
-	</div>
+	</p>
 	
 	<h2> What am I interested about? </h2>
 	
-	<div>
+	<p>
 	  { text.intrestedabout1 }
-	</div>
+	</p>
 	
-	<div>
+	<p>
 	  { text.intrestedabout2 }
-	</div>
+	</p>
 	
       </div>
     )

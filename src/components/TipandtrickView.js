@@ -9,9 +9,9 @@ class TipandtrickView extends React.Component {
       <div>
         <h1> Tips and Tricks </h1>
 	
-	<div>
+	<p>
 	  { text.tipsandtricks1 }
-	</div>
+	</p>
 	
 	
 	

@@ -14,7 +14,6 @@ import TipandtrickView from './components/TipandtrickView'
 import AboutmeView from './components/AboutmeView'
 import { Container } from 'semantic-ui-react'
 import { Well } from 'react-bootstrap'
-import './index.css'
 
 const Footer = () => (
   <Well>

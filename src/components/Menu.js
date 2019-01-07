@@ -7,7 +7,7 @@ const Menu = () => {
     <Navbar inverse collapseOnSelect>
       <Navbar.Header>
         <Navbar.Brand>
-          Anecdote app
+          Johneagle´s home pages
         </Navbar.Brand>
         <Navbar.Toggle />
       </Navbar.Header>

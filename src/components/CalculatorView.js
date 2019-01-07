@@ -103,7 +103,7 @@ class CalculatorView extends React.Component {
 	<Row>
 	  <Col xs={6} md={3} />
 	  <Col xs={6} md={3}>
-	    <Table striped>
+	    <Table bsClass="calculator" className="calculator">
 	      <tbody>
 	        <tr>
 	          <td>
@@ -113,16 +113,16 @@ class CalculatorView extends React.Component {
 	  	    <input type="button" value="2" onClick={this.klick("2")} />
 		  </td>
 		  <td>
-	  	    <input type="button" value="3" onClick={this.klick("3")} />
+	  	    <input type="button" value="3  " onClick={this.klick("3")} />
 		  </td>
 		  <td>
-		    <input type="button" value="(" onClick={this.klick("(")} />
+		    <input type="button" value="(  " onClick={this.klick("(")} />
 	  	  </td>
 		  <td>
-		    <input type="button" value="/" onClick={this.klick("/")} />
+		    <input type="button" value="/ " onClick={this.klick("/")} />
 		  </td>
 		  <td>
-		    <input type="button" value="C" onClick={this.klick("")} />
+		    <input type="button" value="C  " onClick={this.klick("")} />
 		  </td>
 		  <td>
 	            <input type="button" value="Cos" onClick={this.select("cos")} />
@@ -139,19 +139,19 @@ class CalculatorView extends React.Component {
 		    <input type="button" value="5" onClick={this.klick("5")} />
 		  </td>
 		  <td>
-		    <input type="button" value="6" onClick={this.klick("6")} />
+		    <input type="button" value="6  " onClick={this.klick("6")} />
 		  </td>
 		  <td>
-		    <input type="button" value=")" onClick={this.klick(")")} />
+		    <input type="button" value=")  " onClick={this.klick(")")} />
 		  </td>
 		  <td>
 		    <input type="button" value="+" onClick={this.klick("+")} />
 		  </td>
 		  <td>
-	            <input type="button" value="&#8730;" onClick={this.select("sqrt")} />
+	            <input type="button" value="&#8730;   " onClick={this.select("sqrt")} />
 		  </td>
 		  <td>
-	            <input type="button" value="Sin" onClick={this.select("sin")} />
+	            <input type="button" value="Sin " onClick={this.select("sin")} />
 		  </td>
 		  <td>
 	            <input type="button" value="x&#178;" onClick={this.select("square")} />
@@ -165,19 +165,19 @@ class CalculatorView extends React.Component {
 		    <input type="button" value="8" onClick={this.klick("8")} />
 		  </td>
 		  <td>
-		    <input type="button" value="9" onClick={this.klick("9")} />
+		    <input type="button" value="9  " onClick={this.klick("9")} />
 		  </td>
 		  <td>
 		    <input type="button" value="%" onClick={this.select("percent")} />
 		  </td>
 		  <td>
-		    <input type="button" value="-" onClick={this.klick("-")} />
+		    <input type="button" value="- " onClick={this.klick("-")} />
 		  </td>
 		  <td>
 	            <input type="button" value="1/x" onClick={this.select("recip")} />
 		  </td>
 		  <td>
-	            <input type="button" value="Tan" onClick={this.select("tan")} />
+	            <input type="button" value="Tan " onClick={this.select("tan")} />
 		  </td>
 		  <td>
 	            <input type="button" value="x&#179;" onClick={this.select("cube")} />
@@ -188,7 +188,7 @@ class CalculatorView extends React.Component {
 	            <input type="button" value="0" onClick={this.klick("0")} />
 		  </td>
 		  <td>
-	            <input type="button" value="." onClick={this.klick(".")} />
+	            <input type="button" value=". " onClick={this.klick(".")} />
 		  </td>
 		  <td>
 	            <input type="button" value=" +/- " onClick={this.select("plus_or_minus")} />
@@ -197,16 +197,16 @@ class CalculatorView extends React.Component {
 	            <input type="button" value="Pi" onClick={this.select("pi")} />
 		  </td>
 		  <td>
-		    <input type="button" value="*" onClick={this.klick("*")} />
+		    <input type="button" value="* " onClick={this.klick("*")} />
 		  </td>
 		  <td>
-	            <input type="button" value="=" onClick={this.doit()} />
+	            <input type="button" value="  =   " onClick={this.doit()} />
 		  </td>
 		  <td>
-	            <input type="button" value="&#8776;" onClick={this.select("round")} />
+	            <input type="button" value="   &#8776;    " onClick={this.select("round")} />
 		  </td>
 		  <td>
-	            <input type="button" value="!" onClick={this.select("factorial")} />
+	            <input type="button" value="  !  " onClick={this.select("factorial")} />
 	          </td>
 	        </tr>
 	      </tbody>
