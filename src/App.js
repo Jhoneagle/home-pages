@@ -39,28 +39,28 @@ class App extends React.Component {
 	    
 	    {this.props.user === null
               ? <Switch>
-                  <Route path='/login' render={() =>
+                  <Route path='/home-pages/login' render={() =>
                     <LoginForm />
                   } />
                 </Switch>
               : <Switch>
-                  <Redirect from='/login' to='/' />
+                  <Redirect from='/home-pages/login' to='/' />
                 </Switch>
             }
 	  
-	    <Route exact path='/' render={() =>
+	    <Route exact path='/home-pages/' render={() =>
               <MainView />
             } />
 	    
-	    <Route path='/aboutme' render={() =>
+	    <Route path='/home-pages/aboutme' render={() =>
               <AboutmeView />
             } />
 	    
-	    <Route path='/tipandtrick' render={() =>
+	    <Route path='/home-pages/tipandtrick' render={() =>
               <TipandtrickView />
             } />
 	    
-	    <Route path='/calculator' render={() =>
+	    <Route path='/home-pages/calculator' render={() =>
               <CalculatorView />
             } />
           </div>
