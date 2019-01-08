@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 class MainView extends React.Component {
   render() {
     return (
-      <div>
+      <div className="main">
         main view
       </div>
     )

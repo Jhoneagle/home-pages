@@ -6,7 +6,7 @@ class AboutmeView extends React.Component {
     const text = this.props.texts
     
     return (
-      <div>
+      <div className="about">
         <h1> About me </h1>
 	
 	<p>

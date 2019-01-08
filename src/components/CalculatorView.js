@@ -92,7 +92,7 @@ class CalculatorView extends React.Component {
   
   render() {
     return (
-      <Grid>
+      <Grid bsClass="math" className="math">
         <Row>
 	  <Col xs={6} md={3} />
 	  <Col xs={6} md={3}>

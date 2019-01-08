@@ -6,7 +6,7 @@ class TipandtrickView extends React.Component {
     const text = this.props.texts
     
     return (
-      <div>
+      <div className="tricks">
         <h1> Tips and Tricks </h1>
 	
 	<p>
