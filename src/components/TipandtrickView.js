@@ -6,7 +6,7 @@ class TipandtrickView extends React.Component {
     const text = this.props.texts
     
     if (text == null) {
-      return {
+      return (
         <div className="tricks">
 	  <div className="alert"> 
 	    <p>
@@ -14,7 +14,7 @@ class TipandtrickView extends React.Component {
 	    </p>
 	  </div>
 	</div>
-      }
+      )
     }
     
     return (

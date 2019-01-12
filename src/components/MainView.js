@@ -2,8 +2,6 @@
 import { connect } from 'react-redux'
 
 class MainView extends React.Component {
-  const text = this.props.texts
-  
   render() {
     return (
       <div className="main">
