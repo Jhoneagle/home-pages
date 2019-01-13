@@ -45,9 +45,9 @@ class AboutmeView extends React.Component {
 	  { text.myhistory3 }
 	</p>
 	
-	<div className="link">
-	   All public code I have made can be found from my <a href="https://github.com/Jhoneagle">Github</a> profile. 
-	</div>
+	<p>
+	  All public code I have made can be found from my <div className="link"><a href="https://github.com/Jhoneagle">Github</a></div> profile.
+	</p>
 	
 	<h2> What am I interested about? </h2>
 	
