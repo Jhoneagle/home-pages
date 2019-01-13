@@ -46,7 +46,7 @@ class AboutmeView extends React.Component {
 	</p>
 	
 	<p>
-	  All public code I have made can be found from my <div className="link"><a href="https://github.com/Jhoneagle">Github</a></div> profile.
+	  All public code I have made can be found from my <a href="https://github.com/Jhoneagle">Github</a> profile.
 	</p>
 	
 	<h2> What am I interested about? </h2>
