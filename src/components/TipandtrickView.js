@@ -45,6 +45,14 @@ class TipandtrickView extends React.Component {
 	  { text.search }
 	</p>
 	
+	<p>
+	  { text.search2 }
+	</p>
+	
+	<p>
+	  { text.search3 }
+	</p>
+	
 	<h2>
 	  Colors in accessibility, html and RGB color table
 	</h2>
