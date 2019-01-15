@@ -31,7 +31,7 @@ class App extends React.Component {
   render() {
     return (
       <Container>
-        <Router>
+        <Router basename={process.env.PUBLIC_URL}>
           <div>
             <Menu />
             
@@ -39,28 +39,28 @@ class App extends React.Component {
 	    
 	    {this.props.user === null
               ? <Switch>
-                  <Route path='/home-pages/login' render={() =>
+                  <Route path='/login' render={() =>
                     <LoginForm />
                   } />
                 </Switch>
               : <Switch>
-                  <Redirect from='/home-pages/login' to='/' />
+                  <Redirect from='/login' to='/' />
                 </Switch>
             }
 	  
-	    <Route exact path='/home-pages/' render={() =>
+	    <Route exact path='/' render={() =>
               <MainView />
             } />
 	    
-	    <Route path='/home-pages/aboutme' render={() =>
+	    <Route path='/aboutme' render={() =>
               <AboutmeView />
             } />
 	    
-	    <Route path='/home-pages/tipandtrick' render={() =>
+	    <Route path='/tipandtrick' render={() =>
               <TipandtrickView />
             } />
 	    
-	    <Route path='/home-pages/calculator' render={() =>
+	    <Route path='/calculator' render={() =>
               <CalculatorView />
             } />
           </div>

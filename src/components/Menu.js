@@ -13,16 +13,16 @@ const Menu = () => {
       </Navbar.Header>
       <Navbar.Collapse>
         <Nav>
-          <LinkContainer to="/home-pages/">
+          <LinkContainer to="/">
 	    <NavItem>Home</NavItem>
 	  </LinkContainer>
-	  <LinkContainer to="/home-pages/aboutme">
+	  <LinkContainer to="/aboutme">
 	    <NavItem>About me</NavItem>
 	  </LinkContainer>
-	  <LinkContainer to="/home-pages/tipandtrick">
+	  <LinkContainer to="/tipandtrick">
 	    <NavItem>Usefull things</NavItem>
 	  </LinkContainer>
-	  <LinkContainer to="/home-pages/calculator">
+	  <LinkContainer to="/calculator">
 	    <NavItem>Calculator</NavItem>
 	  </LinkContainer>
         </Nav>
