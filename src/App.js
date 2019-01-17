@@ -32,7 +32,7 @@ class App extends React.Component {
     return (
       <Container>
         <Router basename={process.env.PUBLIC_URL}>
-          <div>
+          <div className="logistic">
             <Menu />
             
             <Notification />
