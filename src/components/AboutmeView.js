@@ -19,46 +19,48 @@ class AboutmeView extends React.Component {
     
     return (
       <div className="about">
-        <h1> About me </h1>
+        <div className="text">
+	  <h1> About me </h1>
 	
-	<h2> Hwo am I? </h2>
+	  <h2> Hwo am I? </h2>
 	
-	<p>
-	  { text.whoami1 }
-	</p>
+	  <p>
+	    { text.whoami1 }
+	  </p>
 	
-	<p>
-	  { text.whoami2 }
-	</p>
+	  <p>
+	    { text.whoami2 }
+	  </p>
 	
-	<h2> About my history </h2>
+	  <h2> About my history </h2>
 	
-	<p>
-	  { text.myhistory1 }
-	</p>
+	  <p>
+	    { text.myhistory1 }
+	  </p>
+	  
+	  <p>
+	    { text.myhistory2 }
+	  </p>
+	  
+	  <p>
+	    { text.myhistory3 }
+	  </p>
 	
-	<p>
-	  { text.myhistory2 }
-	</p>
+	  <p>
+	    All public code I have made can be found from my <a href="https://github.com/Jhoneagle">Github</a> profile.
+	  </p>
 	
-	<p>
-	  { text.myhistory3 }
-	</p>
+	  <h2> What am I interested about? </h2>
 	
-	<p>
-	  All public code I have made can be found from my <a href="https://github.com/Jhoneagle">Github</a> profile.
-	</p>
+	  <p>
+	    { text.intrestedabout1 }
+	  </p>
 	
-	<h2> What am I interested about? </h2>
+	  <p>
+	    { text.intrestedabout2 }
+	  </p>
 	
-	<p>
-	  { text.intrestedabout1 }
-	</p>
-	
-	<p>
-	  { text.intrestedabout2 }
-	</p>
-	
+	</div>
       </div>
     )
   }

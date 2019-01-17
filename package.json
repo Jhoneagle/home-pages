@@ -1,6 +1,7 @@
 {
   "name": "home-pages",
   "version": "0.1.0",
+  "private": true,
   "homepage": "https://jhoneagle.github.io/home-pages",
   "dependencies": {
     "axios": "^0.18.0",

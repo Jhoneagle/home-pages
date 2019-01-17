@@ -96,7 +96,7 @@ class CalculatorView extends React.Component {
         <Row>
 	  <Col xs={6} md={3} />
 	  <Col xs={6} md={3}>
-	    <input type="text" value={this.props.calculator} onChange={this.handleChange} name="input" size="50" maxLength="100" />
+	    <input type="text" value={this.props.calculator} onChange={this.handleChange} name="input" />
 	  </Col>
 	  <Col xs={6} md={3} />
 	</Row>
