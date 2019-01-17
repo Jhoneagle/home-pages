@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom'
 import App from './App'
 import store from './store'
 import { Provider } from 'react-redux'
-import * as serviceWorker from './utils/serviceWorker';
 
 const render = () => {
   ReactDOM.render(
@@ -16,7 +15,6 @@ const render = () => {
 
 render()
 store.subscribe(render)
-serviceWorker.unregister()
 
 /**
 const express = require('express');
