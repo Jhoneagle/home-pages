@@ -30,7 +30,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <Container>
+      <Container className="holepage">
         <Router basename={process.env.PUBLIC_URL}>
           <div className="logistic">
             <Menu />

@@ -5,6 +5,7 @@ import { LinkContainer } from "react-router-bootstrap"
 const Menu = () => {
   return (
     <Navbar inverse collapseOnSelect>
+    <div className="menu">
       <Navbar.Header>
         <Navbar.Brand>
           Johneagle´s home pages
@@ -27,6 +28,7 @@ const Menu = () => {
 	  </LinkContainer>
         </Nav>
       </Navbar.Collapse>
+      </div>
     </Navbar>
   )
 }

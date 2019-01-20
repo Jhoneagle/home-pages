@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom'
 import App from './App'
 import store from './store'
 import { Provider } from 'react-redux'
+require('es6-promise/auto');
 
 const render = () => {
   ReactDOM.render(
@@ -15,17 +16,3 @@ const render = () => {
 
 render()
 store.subscribe(render)
-
-/**
-const express = require('express');
-const path = require('path');
-const app = express();
-
-app.use(express.static(path.join(__dirname, 'build')));
-
-app.get('/', function(req, res) {
-  res.sendFile(path.join(__dirname, 'build', 'index.html'));
-});
-
-app.listen(9000);
-**/

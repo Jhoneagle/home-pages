@@ -8,12 +8,12 @@ class AboutmeView extends React.Component {
     if (text == null) {
       return (
         <div className="about">
-	  <div className="alert"> 
-	    <p>
-	      pls wait a moment so that the website loads completely and then reload. It should not take more then few seconds. 
-	    </p>
-	  </div>
-	</div>
+	      <div className="alert"> 
+	        <p>
+	          pls wait a moment so that the website loads completely and then reload. It should not take more then few seconds. 
+	        </p>
+	      </div>
+	    </div>
       )
     }
     
@@ -51,7 +51,7 @@ class AboutmeView extends React.Component {
 	  </p>
 	
 	  <p>
-	    All public code I have made can be found from my <a href="https://github.com/Jhoneagle">Github</a> profile.
+	    All public code I have made can be found from my <a href="https://github.com/Jhoneagle">GitHub</a> profile.
 	  </p>
 	
 	  <h2> What am I interested about? </h2>
