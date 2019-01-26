@@ -20,50 +20,51 @@ class AboutmeView extends React.Component {
     return (
       <div className="about">
         <div className="text">
-	  <h1> About me </h1>
-	
-	  <p>
-	    Hi! Welcome to my home pages. You can find here scientific calculator, some tips and tricks about diffirent stuff and ofcourse some info about me down below. The pages has been made with React so it might have bugs.
-	  </p>
+	  <div className="part1">
+	    <h1> About me </h1>
+	    <p>
+	      Hi! Welcome to my home pages. You can find here scientific calculator, some tips and tricks about diffirent stuff and ofcourse some info about me down below. The pages has been made with React so it might have bugs.
+	    </p>
 	  
-	  <h2> Hwo am I? </h2>
+	    <h2> Hwo am I? </h2>
 	
-	  <p>
-	    { text.whoami1 }
-	  </p>
+	    <p>
+	      { text.whoami1 }
+	    </p>
 	
-	  <p>
-	    { text.whoami2 }
-	  </p>
+	    <p>
+	      { text.whoami2 }
+	    </p>
 	
-	  <h2> About my history </h2>
+	    <h2> About my history </h2>
 	
-	  <p>
-	    { text.myhistory1 }
-	  </p>
+	    <p>
+	      { text.myhistory1 }
+	    </p>
+	  </div>
+	  <div className="part2">
+	    <p>
+	      { text.myhistory2 }
+	    </p>
 	  
-	  <p>
-	    { text.myhistory2 }
-	  </p>
-	  
-	  <p>
-	    { text.myhistory3 }
-	  </p>
+	    <p>
+	      { text.myhistory3 }
+	    </p>
 	
-	  <p>
-	    All public code I have made can be found from my <a href="https://github.com/Jhoneagle">GitHub</a> profile.
-	  </p>
+	    <p>
+	      All public code I have made can be found from my <a href="https://github.com/Jhoneagle">GitHub</a> profile.
+	    </p>
 	
-	  <h2> What am I interested about? </h2>
+	    <h2> What am I interested about? </h2>
 	
-	  <p>
-	    { text.intrestedabout1 }
-	  </p>
+	    <p>
+	      { text.intrestedabout1 }
+	    </p>
 	
-	  <p>
-	    { text.intrestedabout2 }
-	  </p>
-	
+	    <p>
+	      { text.intrestedabout2 }
+	    </p>
+	  </div>
 	</div>
       </div>
     )
