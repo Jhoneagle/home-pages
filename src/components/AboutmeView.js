@@ -20,8 +20,8 @@ class AboutmeView extends React.Component {
     return (
       <div className="about">
         <div className="text">
+	  <h1> About me </h1>
 	  <div className="part1">
-	    <h1> About me </h1>
 	    <p>
 	      Hi! Welcome to my home pages. You can find here scientific calculator, some tips and tricks about diffirent stuff and ofcourse some info about me down below. The pages has been made with React so it might have bugs.
 	    </p>
@@ -41,12 +41,12 @@ class AboutmeView extends React.Component {
 	    <p>
 	      { text.myhistory1 }
 	    </p>
-	  </div>
-	  <div className="part2">
+	  
 	    <p>
 	      { text.myhistory2 }
 	    </p>
-	  
+	  </div>
+	  <div className="part2">
 	    <p>
 	      { text.myhistory3 }
 	    </p>

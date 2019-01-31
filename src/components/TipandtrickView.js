@@ -20,9 +20,8 @@ class TipandtrickView extends React.Component {
     return (
       <div className="tricks">
         <div className="text">
+	  <h1> Tips and Tricks </h1>
 	  <div className="part1">
-	    <h1> Tips and Tricks </h1>
-	
 	    <h2>
 	      How to translate better using google translator
 	    </h2>
@@ -46,12 +45,12 @@ class TipandtrickView extends React.Component {
 	    <p>
 	      { text.search }
 	    </p>
-	  </div>
-	  <div className="part2">
+	  
 	    <p>
 	      { text.search2 }
 	    </p>
-	
+	  </div>
+	  <div className="part2">
 	    <p>
 	      { text.search3 }
 	    </p>
