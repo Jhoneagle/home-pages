@@ -17,7 +17,7 @@ import { Well } from 'react-bootstrap'
 
 const Footer = () => (
   <Well>
-    
+    Made by Johneagle
   </Well>
 )
 
@@ -47,7 +47,7 @@ class App extends React.Component {
                   <Redirect from='/login' to='/' />
                 </Switch>
             }
-	  
+	    
 	    <Route exact path='/' render={() =>
               <MainView />
             } />
@@ -63,6 +63,7 @@ class App extends React.Component {
 	    <Route path='/calculator' render={() =>
               <CalculatorView />
             } />
+	    
           </div>
         </Router>
 	
