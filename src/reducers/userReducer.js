@@ -1,4 +1,5 @@
 import userService from '../services/users'
+
 const initialState = []
 
 const userReducer = (state = initialState, action) => {

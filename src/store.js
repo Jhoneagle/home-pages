@@ -1,4 +1,4 @@
-import { createStore, combineReducers, applyMiddleware } from 'redux'
+import {applyMiddleware, combineReducers, createStore} from 'redux'
 import notificationReducer from './reducers/notificationReducer'
 import userReducer from './reducers/userReducer'
 import textReducer from './reducers/textReducer'

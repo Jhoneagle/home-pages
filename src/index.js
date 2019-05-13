@@ -2,7 +2,8 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import App from './App'
 import store from './store'
-import { Provider } from 'react-redux'
+import {Provider} from 'react-redux'
+
 require('es6-promise/auto');
 
 const render = () => {

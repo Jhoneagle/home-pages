@@ -1,8 +1,8 @@
 ﻿import React from 'react';
-import { notify } from '../reducers/notificationReducer'
-import { login } from '../reducers/loginReducer'
-import { connect } from 'react-redux'
-import { FormGroup, FormControl, ControlLabel, Button } from 'react-bootstrap'
+import {notify} from '../reducers/notificationReducer'
+import {login} from '../reducers/loginReducer'
+import {connect} from 'react-redux'
+import {Button, ControlLabel, FormControl, FormGroup} from 'react-bootstrap'
 
 class LoginForm extends React.Component {
   constructor(props) {
@@ -28,7 +28,7 @@ class LoginForm extends React.Component {
       return (
         <div className='loginForm'>
           <h2>Log in to application</h2>
-	  
+    
           <form onSubmit={this.login}>
             <FormGroup>
               <ControlLabel>Username:</ControlLabel>

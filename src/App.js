@@ -1,10 +1,10 @@
 ﻿import React from 'react'
-import { connect } from 'react-redux'
-import { BrowserRouter as Router, Route, Redirect, Switch } from 'react-router-dom'
-import { notify } from './reducers/notificationReducer'
-import { initializeUsers } from './reducers/userReducer'
-import { initializeTexts } from './reducers/textReducer'
-import { login, logout, initializeCredentials } from './reducers/loginReducer'
+import {connect} from 'react-redux'
+import {BrowserRouter as Router, Redirect, Route, Switch} from 'react-router-dom'
+import {notify} from './reducers/notificationReducer'
+import {initializeUsers} from './reducers/userReducer'
+import {initializeTexts} from './reducers/textReducer'
+import {initializeCredentials, login, logout} from './reducers/loginReducer'
 import LoginForm from './components/LoginForm'
 import Menu from './components/Menu'
 import Notification from './components/Notification'
@@ -12,8 +12,8 @@ import MainView from './components/MainView'
 import CalculatorView from './components/CalculatorView'
 import TipandtrickView from './components/TipandtrickView'
 import AboutmeView from './components/AboutmeView'
-import { Container } from 'semantic-ui-react'
-import { Well } from 'react-bootstrap'
+import {Container} from 'semantic-ui-react'
+import {Well} from 'react-bootstrap'
 
 const Footer = () => (
   <Well>
@@ -36,8 +36,8 @@ class App extends React.Component {
             <Menu />
             
             <Notification />
-	    
-	    {this.props.user === null
+      
+      {this.props.user === null
               ? <Switch>
                   <Route path='/login' render={() =>
                     <LoginForm />
@@ -47,27 +47,27 @@ class App extends React.Component {
                   <Redirect from='/login' to='/' />
                 </Switch>
             }
-	    
-	    <Route exact path='/' render={() =>
+      
+      <Route exact path='/' render={() =>
               <MainView />
             } />
-	    
-	    <Route path='/aboutme' render={() =>
+      
+      <Route path='/aboutme' render={() =>
               <AboutmeView />
             } />
-	    
-	    <Route path='/tipandtrick' render={() =>
+      
+      <Route path='/tipandtrick' render={() =>
               <TipandtrickView />
             } />
-	    
-	    <Route path='/calculator' render={() =>
+      
+      <Route path='/calculator' render={() =>
               <CalculatorView />
             } />
-	    
+      
           </div>
         </Router>
-	
-	<Footer />
+  
+  <Footer />
       </Container>
     )
   }

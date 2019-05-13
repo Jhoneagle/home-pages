@@ -1,6 +1,6 @@
 import React from 'react'
-import { connect } from 'react-redux'
-import { Alert } from 'react-bootstrap'
+import {connect} from 'react-redux'
+import {Alert} from 'react-bootstrap'
 
 class Notification extends React.Component {
   render() {

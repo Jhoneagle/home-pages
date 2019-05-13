@@ -1,8 +1,8 @@
 ﻿import React from 'react'
-import { connect } from 'react-redux'
-import Calculator  from '../utils/calculator'
-import { createOutput } from '../reducers/calculatorReducer'
-import { Table, Grid, Col, Row } from 'react-bootstrap'
+import {connect} from 'react-redux'
+import Calculator from '../utils/calculator'
+import {createOutput} from '../reducers/calculatorReducer'
+import {Col, Grid, Row, Table} from 'react-bootstrap'
 
 class CalculatorView extends React.Component {
   handleChange = (event) => {
@@ -39,47 +39,47 @@ class CalculatorView extends React.Component {
     switch(button) {
       case 'sin':
         already = Calculator.sin(already);
-				break;
+        break;
       case 'cos':
         already = Calculator.cos(already);
-				break;
+        break;
       case 'tan':
         already = Calculator.tan(already);
-				break;
+        break;
       case 'recip':
         already = Calculator.recip(already);
-				break;
+        break;
       case 'square':
         already = Calculator.square(already);
-				break;
+        break;
       case 'cube':
         already = Calculator.cube(already);
-				break;
+        break;
       case 'pi':
         const pi = Calculator.pi();
-				already = pi.toString();
-				break;
+        already = pi.toString();
+        break;
       case 'plus_or_minus':
         already = Calculator.plus_or_minus(already);
-				break;
+        break;
       case 'percent':
         already = Calculator.percent(already);
-				break;
+        break;
       case 'sqrt':
         already = Calculator.sqrt(already);
-				break;
+        break;
       case 'power':
         already = Calculator.power(already);
-				break;
+        break;
       case 'round':
         already = Calculator.round(already);
-				break;
+        break;
       case 'factorial':
         already = Calculator.factorial(already);
-				break;
+        break;
       default:
         console.log(button);
-				break;
+        break;
     }
     
     if (button !== 'pi') {
@@ -94,126 +94,50 @@ class CalculatorView extends React.Component {
     return (
       <Grid bsClass="math" className="math">
         <Row>
-					<Col xs={6} md={3} />
-					<Col xs={6} md={3}>
-						<input type="text" value={this.props.calculator} onChange={this.handleChange} name="input" />
-					</Col>
-					<Col xs={6} md={3} />
-				</Row>
-				<Row>
-					<Col xs={6} md={3} />
-					<Col xs={6} md={3}>
-						<Table bsClass="calculator" className="calculator">
-							<tbody>
-								<tr>
-									<td>
-										<input type="button" value="1" onClick={this.klick("1")} />
-									</td>
-									<td>
-											<input type="button" value="2" onClick={this.klick("2")} />
-									</td>
-									<td>
-											<input type="button" value="3" onClick={this.klick("3")} />
-									</td>
-									<td>
-										<input type="button" value="  (   " onClick={this.klick("(")} />
-										</td>
-									<td>
-										<input type="button" value="/" onClick={this.klick("/")} />
-									</td>
-									<td>
-										<input type="button" value="  C   " onClick={this.klick("")} />
-									</td>
-									<td>
-										<input type="button" value="Cos" onClick={this.select("cos")} />
-									</td>
-									<td>
-										<input type="button" value="x^" onClick={this.select("power")} />
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<input type="button" value="4" onClick={this.klick("4")} />
-									</td>
-									<td>
-										<input type="button" value="5" onClick={this.klick("5")} />
-									</td>
-									<td>
-										<input type="button" value="6" onClick={this.klick("6")} />
-									</td>
-									<td>
-										<input type="button" value="  )   " onClick={this.klick(")")} />
-									</td>
-									<td>
-										<input type="button" value="* " onClick={this.klick("*")} />
-									</td>
-									<td>
-										<input type="button" value="  &#8730;    " onClick={this.select("sqrt")} />
-									</td>
-									<td>
-										<input type="button" value="Sin " onClick={this.select("sin")} />
-									</td>
-									<td>
-										<input type="button" value="x&#178; " onClick={this.select("square")} />
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<input type="button" value="7" onClick={this.klick("7")} />
-									</td>
-									<td>
-										<input type="button" value="8" onClick={this.klick("8")} />
-									</td>
-									<td>
-										<input type="button" value="9" onClick={this.klick("9")} />
-									</td>
-									<td>
-										<input type="button" value="% " onClick={this.select("percent")} />
-									</td>
-									<td>
-										<input type="button" value="- " onClick={this.klick("-")} />
-									</td>
-									<td>
-													<input type="button" value="1/x" onClick={this.select("recip")} />
-									</td>
-									<td>
-													<input type="button" value="Tan" onClick={this.select("tan")} />
-									</td>
-									<td>
-										<input type="button" value="x&#179; " onClick={this.select("cube")} />
-									</td>
-								</tr>
-								<tr>
-		  						<td>
-	            			<input type="button" value=". " onClick={this.klick(".")} />
-		  						</td>
-									<td>
-										<input type="button" value="0" onClick={this.klick("0")} />
-									</td>
-									<td>
-	            			<input type="button" value="=" onClick={this.doit()} />
-									</td>
-									<td>
-	            			<input type="button" value="Pi " onClick={this.select("pi")} />
-									</td>
-									<td>
-										<input type="button" value="+" onClick={this.klick("+")} />
-									</td>
-									<td>
-	            			<input type="button" value="+/-" onClick={this.select("plus_or_minus")} />
-									</td>
-									<td>
-	            			<input type="button" value="  &#8776;    " onClick={this.select("round")} />
-									</td>
-									<td>
-	            			<input type="button" value="  !   " onClick={this.select("factorial")} />
-	          			</td>
-								</tr>
-							</tbody>
-						</Table>
-					</Col>
-					<Col xs={6} md={3} />
-				</Row>
+          <Col xs={4} sm={4} md={4}>
+            <input type="text" value={this.props.calculator} onChange={this.handleChange} name="input" />
+          </Col>
+        </Row>
+        <Row>
+          <input type="button" value="1" onClick={this.klick("1")} />
+          <input type="button" value="2" onClick={this.klick("2")} />
+          <input type="button" value="3" onClick={this.klick("3")} />
+          <input type="button" value="  (   " onClick={this.klick("(")} />
+          <input type="button" value="/" onClick={this.klick("/")} />
+          <input type="button" value="  C   " onClick={this.klick("")} />
+          <input type="button" value="Cos" onClick={this.select("cos")} />
+          <input type="button" value="x^" onClick={this.select("power")} />
+        </Row>
+        <Row>
+          <input type="button" value="4" onClick={this.klick("4")} />
+          <input type="button" value="5" onClick={this.klick("5")} />
+          <input type="button" value="6" onClick={this.klick("6")} />
+          <input type="button" value="  )   " onClick={this.klick(")")} />
+          <input type="button" value="* " onClick={this.klick("*")} />
+          <input type="button" value="  &#8730;    " onClick={this.select("sqrt")} />
+          <input type="button" value="Sin " onClick={this.select("sin")} />
+          <input type="button" value="x&#178; " onClick={this.select("square")} />
+        </Row>
+        <Row>
+          <input type="button" value="7" onClick={this.klick("7")} />
+          <input type="button" value="8" onClick={this.klick("8")} />
+          <input type="button" value="9" onClick={this.klick("9")} />
+          <input type="button" value="% " onClick={this.select("percent")} />
+          <input type="button" value="- " onClick={this.klick("-")} />
+          <input type="button" value="1/x" onClick={this.select("recip")} />
+          <input type="button" value="Tan" onClick={this.select("tan")} />
+          <input type="button" value="x&#179; " onClick={this.select("cube")} />
+        </Row>
+        <Row>
+          <input type="button" value=". " onClick={this.klick(".")} />
+          <input type="button" value="0" onClick={this.klick("0")} />
+          <input type="button" value="=" onClick={this.doit()} />
+          <input type="button" value="Pi " onClick={this.select("pi")} />
+          <input type="button" value="+" onClick={this.klick("+")} />
+          <input type="button" value="+/-" onClick={this.select("plus_or_minus")} />
+          <input type="button" value="  &#8776;    " onClick={this.select("round")} />
+          <input type="button" value="  !   " onClick={this.select("factorial")} />
+        </Row>
       </Grid>
     )
   }

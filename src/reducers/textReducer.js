@@ -1,4 +1,5 @@
 import textService from '../services/text'
+
 const initialState = null
 
 const textReducer = (state = initialState, action) => {
