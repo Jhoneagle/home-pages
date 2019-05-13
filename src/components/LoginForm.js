@@ -15,13 +15,13 @@ class LoginForm extends React.Component {
   }
 
   login = (event) => {
-    event.preventDefault()
+    event.preventDefault();
     this.props.login(this.state.username, this.state.password)
-  }
+  };
 
   handleFieldChange = (event) => {
     this.setState({ [event.target.name]: event.target.value })
-  }
+  };
 
   render() {
     if (this.state.loginFormVisible) {

@@ -6,10 +6,10 @@ class MainView extends React.Component {
     return (
       <div className="main">
         <div className="text">
-	  <h1> 
-	    Johneagle´s home page 
-	  </h1>
-	</div>
+          <h1>
+            Johneagle´s home page
+          </h1>
+        </div>
       </div>
     )
   }
