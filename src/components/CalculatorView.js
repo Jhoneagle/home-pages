@@ -94,7 +94,7 @@ class CalculatorView extends React.Component {
     return (
       <Grid bsClass="math" className="math">
         <Row>
-          <Col md={5}>
+          <Col xs={9} md={5}>
             <input type="text" value={this.props.calculator} onChange={this.handleChange} name="input" />
           </Col>
         </Row>
