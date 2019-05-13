@@ -2,7 +2,7 @@
 import {connect} from 'react-redux'
 import Calculator from '../utils/calculator'
 import {createOutput} from '../reducers/calculatorReducer'
-import {Col, Grid, Row, Table} from 'react-bootstrap'
+import {Col, Grid, Row} from 'react-bootstrap'
 
 class CalculatorView extends React.Component {
   handleChange = (event) => {
@@ -94,7 +94,7 @@ class CalculatorView extends React.Component {
     return (
       <Grid bsClass="math" className="math">
         <Row>
-          <Col xs={4} sm={4} md={4}>
+          <Col md={5}>
             <input type="text" value={this.props.calculator} onChange={this.handleChange} name="input" />
           </Col>
         </Row>
