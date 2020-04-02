@@ -26,7 +26,7 @@ class AboutmeView extends React.Component {
               Hi! Welcome to my home pages. You can find here scientific calculator, some tips and tricks about diffirent stuff and ofcourse some info about me down below. The pages has been made with React so it might have bugs.
             </p>
           
-            <h2> Hwo am I? </h2>
+            <h2> Who am I? </h2>
         
             <p>
               { text.whoami1 }
