@@ -4,7 +4,7 @@
   "private": true,
   "homepage": "https://jhoneagle.github.io/home-pages",
   "dependencies": {
-    "axios": "^0.18.1",
+    "axios": "^0.21.1",
     "es6-promise": "^4.2.5",
     "gh-pages": "^2.0.1",
     "react": "^16.6.3",
